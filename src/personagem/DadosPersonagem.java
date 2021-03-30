@@ -29,7 +29,7 @@ public class DadosPersonagem {
 		this.tipoFisico = "";
 		this.altura = 0.0;
 		this.peso = 0.0;
-		this.modificadorDeTamanho = 18;
+		this.modificadorDeTamanho = 10;
 	}
 	
 	

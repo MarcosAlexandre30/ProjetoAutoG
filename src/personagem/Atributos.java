@@ -46,7 +46,7 @@ public class Atributos {
 		forca = 10;
 		modificadorForca = 0;
 		custoForca = 0;
-		pontosGastosFor = 10;
+		pontosGastosFor = 0;
 		
 		destreza = 10;
 		modificadorDestreza = 0;
@@ -374,20 +374,35 @@ public class Atributos {
 		}else {
 			custoForca = 2;
 		}
-		System.out.println(custoForca);
+		System.out.println("Método CalculoCustoForca:"+custoForca);
 		
 	}
-
-	public void caluloAtributos() {
-		System.out.println(custoForca);
-		nivelForca = pontosGastosFor/custoForca;
-		forca = forca + modificadorForca + nivelForca;
-		nivelInt= pontosGastosInt/custoVinte;
-		inteligencia = inteligencia + modificadorInteligencia + nivelInt;
-		nivelDes = pontosGastosDes/custoVinte;
-		destreza = destreza + modificadorDestreza + nivelDes;
-		nivelSaude = pontosGastosSaude/custoDez;
-		saude = saude + modificadorSaude + nivelSaude;
-		
+	
+	public void calculoForca() {
+		if(forca>=0) {
+			nivelForca = pontosGastosFor/custoForca;
+			forca = 10 + modificadorForca + nivelForca;
+		}
+	}
+	
+	public void calculoInt() {
+		if(destreza>=0) {
+			nivelInt= pontosGastosInt/custoVinte;
+			inteligencia = 10 + modificadorInteligencia + nivelInt;
+		}
+	}
+	
+	public void calculoDes() {
+		if(destreza>=0){
+			nivelDes = pontosGastosDes/custoVinte;
+			destreza = 10 + modificadorDestreza + nivelDes;
+		}
+	}
+	
+	public void calculoSaude() {
+		if(saude>=0) {	
+			nivelSaude = pontosGastosSaude/custoDez;
+			saude = 10 + modificadorSaude + nivelSaude;
+		}
 	}
 }
